@@ -1,0 +1,23 @@
+## Interface: 100100
+## Title: UpgradeItemState
+## Notes:
+## Version: 0.0.1
+
+## Author: Areko
+## SavedVariables: UpgradeItemStateDB
+#@do-not-package@
+## Dependencies: Ace3
+#@end-do-not-package@
+#@non-debug@
+# ## OptionalDeps: LibStub, CallbackHandler-1.0, Ace3
+
+# Libs/LibStub/LibStub.lua
+# Libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
+# Libs\AceLocale-3.0\AceLocale-3.0.xml
+# Libs\AceDB-3.0\AceDB-3.0.xml
+#@end-non-debug@
+
+locales/enUS.lua
+locales/deDE.lua
+
+util.lua
