@@ -20,15 +20,32 @@ new_globals = {
 }
 
 read_globals = {
+    -- Addons
+    "LibStub",
+
+    -- WoW Enums
+    "Enum.ItemRedundancySlot",
+    "Enum.TooltipDataType.Item",
+
     -- WoW Objects
     "DEFAULT_CHAT_FRAME",
+    "TooltipDataProcessor",
+
+    -- WoW Frames
+    "GameTooltip",
+    "ItemRefTooltip",
+    "ItemUpgradeFrame",
 
     -- WoW API
     "CreateFrame",
+    "IsAddOnLoaded",
+    "IsLoggedIn",
 
     -- WoW C_API
     "C_EventUtils",
+    "C_ItemUpgrade",
 
     -- WoW Lua API
     "securecallfunction",
+    "wipe",
 }
