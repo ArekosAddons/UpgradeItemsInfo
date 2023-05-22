@@ -2,9 +2,7 @@
 ## Title: UpgradeItemsInfo
 ## Notes:
 ## Version: 0.0.1
-
 ## Author: Areko
-## SavedVariables: UpgradeItemsInfoDB
 #@do-not-package@
 ## Dependencies: Ace3
 #@end-do-not-package@
@@ -14,7 +12,6 @@
 # Libs/LibStub/LibStub.lua
 # Libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
 # Libs\AceLocale-3.0\AceLocale-3.0.xml
-# Libs\AceDB-3.0\AceDB-3.0.xml
 #@end-non-debug@
 
 locales/enUS.lua
