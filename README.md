@@ -1,2 +1,2 @@
-# UpgradeItemState
-Display for how many Item types an upgrade Item is still needed.
+# UpgradeItemsInfo
+Display for how many 'Item Slots' an upgrade item is still needed for.

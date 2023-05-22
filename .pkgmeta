@@ -11,4 +11,4 @@ manual-changelog:
 
 ignore:
   - CHANGELOG.md
-  - UpgradeItemState.toc
+  - UpgradeItemsInfo.toc

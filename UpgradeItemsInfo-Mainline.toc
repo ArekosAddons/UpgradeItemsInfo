@@ -1,10 +1,10 @@
 ## Interface: 100100
-## Title: UpgradeItemState
+## Title: UpgradeItemsInfo
 ## Notes:
 ## Version: 0.0.1
 
 ## Author: Areko
-## SavedVariables: UpgradeItemStateDB
+## SavedVariables: UpgradeItemsInfoDB
 #@do-not-package@
 ## Dependencies: Ace3
 #@end-do-not-package@

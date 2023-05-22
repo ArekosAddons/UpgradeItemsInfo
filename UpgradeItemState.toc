@@ -1,2 +1,0 @@
-## Interface: 100100
-## Title: UpgradeItemState
