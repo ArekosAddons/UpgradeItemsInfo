@@ -29,6 +29,9 @@ read_globals = {
 
     -- WoW Objects
     "DEFAULT_CHAT_FRAME",
+    "LegendaryItemAlertSystem",
+    "LootAlertSystem",
+    "LootUpgradeAlertSystem",
     "TooltipDataProcessor",
 
     -- WoW Frames
@@ -44,8 +47,10 @@ read_globals = {
     -- WoW C_API
     "C_EventUtils",
     "C_ItemUpgrade",
+    "C_Timer.After",
 
     -- WoW Lua API
+    "hooksecurefunc",
     "securecallfunction",
     "wipe",
 }

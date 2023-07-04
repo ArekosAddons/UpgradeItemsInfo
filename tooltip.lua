@@ -157,6 +157,51 @@ local function onLogin()
         end)
     end
 
+    local function onLoot(itemLink)
+        if not itemLink then return end
+
+        local redundancySlotID = C_ItemUpgrade.GetHighWatermarkSlotForItem(itemLink)
+        if redundancySlotID >= 0 then -- invalid items are -1
+            -- local highMark = C_ItemUpgrade.GetHighWatermarkForItem(itemLink)
+            local highMark = C_ItemUpgrade.GetHighWatermarkForSlot(redundancySlotID)
+
+            local currentHighMark = highMarkCache[redundancySlotID]
+            if currentHighMark ~= highMark then
+                highMarkCache[redundancySlotID] = highMark
+                wipe(linesCache)
+
+                if IsCalculatedWeapon[redundancySlotID] then
+                    if highMark > currentHighMark then
+                        calculateWeaponSet_HighMark()
+                    else
+                        -- HighMark rest to smaller value, need to clear all weapons values
+                        updateHighMarkCache()
+                    end
+                end
+            end
+        end
+    end
+
+    local function LootWonAlertFrame_SetUp_Hook(self, itemLink, _, _, _, _, isCurrency)
+        if isCurrency then return end
+
+        onLoot(self.hyperlink or itemLink)
+    end
+
+    hooksecurefunc("LootWonAlertFrame_SetUp", LootWonAlertFrame_SetUp_Hook)
+    hooksecurefunc(LootAlertSystem, "setUpFunction", LootWonAlertFrame_SetUp_Hook)
+
+
+    local function Simple_SetUp_Hook(self, itemLink)
+        onLoot(self.hyperlink or itemLink)
+    end
+
+    hooksecurefunc("LootUpgradeFrame_SetUp", Simple_SetUp_Hook)
+    hooksecurefunc(LootUpgradeAlertSystem, "setUpFunction", Simple_SetUp_Hook)
+
+    hooksecurefunc("LegendaryItemAlertFrame_SetUp", Simple_SetUp_Hook)
+    hooksecurefunc(LegendaryItemAlertSystem, "setUpFunction", Simple_SetUp_Hook)
+
     return true
 end
 
