@@ -5,12 +5,71 @@ local L = LibStub("AceLocale-3.0"):GetLocale(ADDONNAME)
 local RedundancySlots = Enum.ItemRedundancySlot
 
 local highMarkCache = {}
+local IsCalculatedWeapon, calculateWeaponSet_HighMark do
+    local Twohand = RedundancySlots.Twohand
+    local Onehand = RedundancySlots.OnehandWeapon
+    local Onehand2nd = RedundancySlots.OnehandWeaponSecond
+    local Mainhand = RedundancySlots.MainhandWeapon
+    local Offhand = RedundancySlots.Offhand
+
+    IsCalculatedWeapon = {
+        [Twohand] = true,
+        [Onehand] = true,
+        [Onehand2nd] = true,
+        [Mainhand] = true,
+        [Offhand] = true,
+    }
+
+    local WeaponSets = {
+        Twohand,
+        {Onehand, Onehand2nd},
+        {Mainhand, Offhand},
+    }
+    local AllWeapons = {
+        Twohand,
+        Onehand, Onehand2nd,
+        Mainhand, Offhand,
+    }
+
+    function calculateWeaponSet_HighMark()
+        local weaponHighMark = 0
+        for _, data in ipairs(WeaponSets) do
+            if type(data) ~= "table" then
+                local hm = highMarkCache[data]
+                if hm > weaponHighMark then
+                    weaponHighMark = hm
+                end
+            else
+                local lowest = math.huge -- lowest
+                for _, slotID in ipairs(data) do
+                    local hm = highMarkCache[slotID]
+                    if hm < lowest then
+                        lowest = hm
+                    end
+                end
+                if lowest ~= math.huge and lowest > weaponHighMark then
+                    weaponHighMark = lowest
+                end
+            end
+        end
+
+        for _, slotID in ipairs(AllWeapons) do
+            local hm = highMarkCache[slotID]
+            if hm > 1 and hm < weaponHighMark then
+                highMarkCache[slotID] = weaponHighMark
+            end
+        end
+    end
+end
+
 local function updateHighMarkCache()
     -- characterHighWatermark, accountHighWatermark = C_ItemUpgrade.GetHighWatermarkForSlot(itemRedundancySlot)
     for _, id  in pairs(RedundancySlots) do
         local high = C_ItemUpgrade.GetHighWatermarkForSlot(id)
         highMarkCache[id] = high
     end
+
+    calculateWeaponSet_HighMark()
 end
 
 local SlotIDToName = {}
