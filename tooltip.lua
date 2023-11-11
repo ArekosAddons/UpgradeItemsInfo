@@ -5,14 +5,14 @@ local L = LibStub("AceLocale-3.0"):GetLocale(ADDONNAME)
 local RedundancySlots = Enum.ItemRedundancySlot
 
 local highMarkCache = {}
-local IsCalculatedWeapon, calculateWeaponSet_HighMark do
+local IsCalculatedWeaponSlot, calculateWeaponSet_HighMark do
     local Twohand = RedundancySlots.Twohand
     local Onehand = RedundancySlots.OnehandWeapon
     local Onehand2nd = RedundancySlots.OnehandWeaponSecond
     local Mainhand = RedundancySlots.MainhandWeapon
     local Offhand = RedundancySlots.Offhand
 
-    IsCalculatedWeapon = {
+    IsCalculatedWeaponSlot = {
         [Twohand] = true,
         [Onehand] = true,
         [Onehand2nd] = true,
@@ -125,22 +125,40 @@ local supportedTooltips = {
     [GameTooltip] = true,
     [ItemRefTooltip] = true,
 }
+
 local function onLogin()
     updateHighMarkCache()
 
-    local tokens = ns.TOKENS
     local ipairs, unpack = ipairs, unpack -- local upvalues for faster lookup
-    TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, function(tooltip, data)
-        if not supportedTooltips[tooltip] then return end
-        local maxLevel = tokens[data.id]
-        if not maxLevel then return end
-
+    local function add_info(tooltip, maxLevel)
         local lines = getLines(maxLevel)
 
         for _, line in ipairs(lines) do
             line.f(tooltip, unpack(line, 1, line.n))
         end
-    end)
+    end
+
+    local item_tokens = ns.ITEM_TOKENS
+    if next(item_tokens) ~= nil then
+        TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, function(tooltip, data)
+            if not supportedTooltips[tooltip] then return end
+            local maxLevel = item_tokens[data.id]
+            if not maxLevel then return end
+
+            add_info(tooltip, maxLevel)
+        end)
+    end
+
+    local currencies_token = ns.CURRENCIES_TOKEN
+    if next(currencies_token) ~= nil then
+        TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Currency, function(tooltip, data)
+            if not supportedTooltips[tooltip] then return end
+            local maxLevel = currencies_token[data.id]
+            if not maxLevel then return end
+
+            add_info(tooltip, maxLevel)
+        end)
+    end
 
 
     local function onHide()
@@ -170,7 +188,7 @@ local function onLogin()
                 highMarkCache[redundancySlotID] = highMark
                 wipe(linesCache)
 
-                if IsCalculatedWeapon[redundancySlotID] then
+                if IsCalculatedWeaponSlot[redundancySlotID] then
                     if highMark > currentHighMark then
                         calculateWeaponSet_HighMark()
                     else
