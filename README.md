@@ -1,14 +1,14 @@
 # UpgradeItemsInfo
-Display for how many 'Item Slots' an upgrade item is still needed for.
+Display for how many 'Item Slots' an upgrade item/currency is still needed for.
 
 Current support for:
- * [Whelpling's Shadowflame Crest][WhelplingsShadowflameCrest] and its fragments
- * [Drake's Shadowflame Crest][DrakesShadowflameCrest] and its fragments
- * [Wyrm's Shadowflame Crest][WyrmsShadowflameCrest] and its fragments
- * [Aspect's Shadowflame Crest][AspectsShadowflameCrest] and its fragments
+ * [Whelpling's Dreaming Crest][WhelplingsDreamingCrest]
+ * [Drake's Dreaming Crest][DrakesDreamingCrest]
+ * [Wyrm's Dreaming Crest][WyrmsDreamingCrest]
+ * [Aspect's Dreaming Crest][AspectsDreamingCrest]
 
 
-[WhelplingsShadowflameCrest]: https://www.wowhead.com/item=204193/whelplings-shadowflame-crest
-[DrakesShadowflameCrest]: https://www.wowhead.com/item=204195/drakes-shadowflame-crest
-[WyrmsShadowflameCrest]: https://www.wowhead.com/item=204196/wyrms-shadowflame-crest
-[AspectsShadowflameCrest]: https://www.wowhead.com/item=204194/aspects-shadowflame-crest
+[WhelplingsDreamingCrest]: https://www.wowhead.com/currency=2706/whelplings-draming-crest
+[DrakesDreamingCrest]: https://www.wowhead.com/currency=2707/drakes-draming-crest
+[WyrmsDreamingCrest]: https://www.wowhead.com/currency=2708/wyrms-draming-crest
+[AspectsDreamingCrest]: https://www.wowhead.com/currency=2709/aspects-draming-crest
