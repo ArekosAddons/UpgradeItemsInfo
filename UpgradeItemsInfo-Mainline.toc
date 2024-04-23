@@ -1,4 +1,4 @@
-## Interface: 100200
+## Interface: 100206
 ## Title: UpgradeItemsInfo
 ## Notes:
 ## Version: 1.1.0
