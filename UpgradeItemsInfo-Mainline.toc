@@ -1,7 +1,7 @@
 ## Interface: 100206
 ## Title: UpgradeItemsInfo
 ## Notes:
-## Version: 1.1.0
+## Version: 1.1.1
 ## Author: Areko
 #@do-not-package@
 ## Dependencies: Ace3
