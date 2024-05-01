@@ -66,7 +66,7 @@ local function updateHighMarkCache()
     -- characterHighWatermark, accountHighWatermark = C_ItemUpgrade.GetHighWatermarkForSlot(itemRedundancySlot)
     for _, id  in pairs(RedundancySlots) do
         local high = C_ItemUpgrade.GetHighWatermarkForSlot(id)
-        highMarkCache[id] = high
+        highMarkCache[id] = high or 0
     end
 
     calculateWeaponSet_HighMark()
