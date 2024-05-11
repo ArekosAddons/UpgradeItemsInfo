@@ -1,5 +1,5 @@
 # UpgradeItemsInfo
-Display for how many 'Item Slots' an upgrade item/currency is still needed for.
+Indicates the number of 'Equipment Slots' still requiring an Upgrade Token.
 
 Current support for:
  * [Whelpling's Awakened Crest][WhelplingsAwakenedCrest]
