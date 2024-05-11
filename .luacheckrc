@@ -4,7 +4,7 @@ max_code_line_length = 120
 max_string_line_length = false
 max_comment_line_length = false
 
-max_cyclomatic_complexity = 32
+max_cyclomatic_complexity = 15
 
 self = false
 
@@ -26,6 +26,7 @@ read_globals = {
     -- WoW Enums
     "Enum.ItemRedundancySlot",
     "Enum.TooltipDataType.Item",
+    "Enum.TooltipDataType.Currency",
 
     -- WoW Objects
     "DEFAULT_CHAT_FRAME",
