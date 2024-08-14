@@ -2,12 +2,12 @@
 Indicates the number of 'Equipment Slots' still requiring an Upgrade Token.
 
 Current support for:
- * [Whelpling's Awakened Crest][WhelplingsAwakenedCrest]
- * [Drake's Awakened Crest][DrakesAwakenedCrest]
- * [Wyrm's Awakened Crest][WyrmsAwakenedCrest]
- * [Aspect's Awakened Crest][AspectsAwakenedCrest]
+ * [Weathered Harbinger Crest][WeatheredHarbingerCrest]
+ * [Carved Harbinger Crest][CarvedHarbingerCrest]
+ * [Runed Harbinger Crest][RunedHarbingerCrest]
+ * [Gilded Harbinger Crest][GildedHarbingerCrest]
 
-[WhelplingsAwakenedCrest]: https://www.wowhead.com/currency=2806/whelplings_awakened_crest
-[DrakesAwakenedCrest]: https://www.wowhead.com/currency=2807/drakes_awakened_crest
-[WyrmsAwakenedCrest]: https://www.wowhead.com/currency=2809/wyrms_awakened_crest
-[AspectsAwakenedCrest]: https://www.wowhead.com/currency=2812/aspects_awakened_crest
+[WeatheredHarbingerCrest]: https://www.wowhead.com/currency=2914
+[CarvedHarbingerCrest]: https://www.wowhead.com/currency=2915
+[RunedHarbingerCrest]: https://www.wowhead.com/currency=2916
+[GildedHarbingerCrest]: https://www.wowhead.com/currency=2917
