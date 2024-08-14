@@ -164,7 +164,7 @@ local function onLogin()
     local function onHide()
         resetCaches()
     end
-    if IsAddOnLoaded("Blizzard_ItemUpgradeUI") then
+    if C_AddOns.IsAddOnLoaded("Blizzard_ItemUpgradeUI") then
         ItemUpgradeFrame:HookScript("OnHide", onHide)
     else
         ns.RegisterEvent("ADDON_LOADED", function(_, addonName)
