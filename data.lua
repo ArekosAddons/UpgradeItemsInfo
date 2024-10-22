@@ -6,15 +6,6 @@ local ITEM_TOKENS = {
 
 -- [currencyID] = maxItemLevel
 ns.CURRENCIES_TOKEN = {
-    -- Dragonflight: Season 4
-    [2806] = 489, -- Whelpling's Awakened Crest
-    [2807] = 502, -- Drake's Awakened Crest
-    [2809] = 515, -- Wyrm's Awakened Crest
-    [2812] = 528, -- Aspect's Awakened Crest
-    [2805] = 489, -- Whelpling's Awakened Crest (hidden)
-    [2808] = 502, -- Drake's Awakened Crest (hidden)
-    [2810] = 515, -- Wyrm's Awakened Crest (hidden)
-    [2811] = 528, -- Aspect's Awakened Crest (hidden)
     -- War Within: Season 1
     [2914] = 593, -- Weathered Harbinger Crest
     [2915] = 606, -- Carved Harbinger Crest
