@@ -1,4 +1,6 @@
-local ADDONNAME, ns = ...
+local ADDONNAME = ...
+---@class ns
+local ns = select(2, ...)
 
 local L = LibStub("AceLocale-3.0"):GetLocale(ADDONNAME)
 
@@ -63,7 +65,6 @@ local IsCalculatedWeaponSlot, calculateWeaponSet_HighMark do
 end
 
 local function updateHighMarkCache()
-    -- characterHighWatermark, accountHighWatermark = C_ItemUpgrade.GetHighWatermarkForSlot(itemRedundancySlot)
     for _, id  in pairs(RedundancySlots) do
         local high = C_ItemUpgrade.GetHighWatermarkForSlot(id)
         highMarkCache[id] = high or 0
@@ -129,11 +130,12 @@ local supportedTooltips = {
 local function onLogin()
     updateHighMarkCache()
 
-    local ipairs, unpack = ipairs, unpack -- local upvalues for faster lookup
+    local unpack = unpack -- local upvalues for faster lookup
     local function add_info(tooltip, maxLevel)
         local lines = getLines(maxLevel)
 
-        for _, line in ipairs(lines) do
+        for i = 1, #lines do
+            local line = lines[i]
             line.f(tooltip, unpack(line, 1, line.n))
         end
     end
