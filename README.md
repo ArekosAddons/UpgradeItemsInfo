@@ -2,12 +2,12 @@
 Indicates the number of 'Equipment Slots' still requiring an Upgrade Token.
 
 Current support for:
- * [Weathered Harbinger Crest][WeatheredHarbingerCrest]
- * [Carved Harbinger Crest][CarvedHarbingerCrest]
- * [Runed Harbinger Crest][RunedHarbingerCrest]
- * [Gilded Harbinger Crest][GildedHarbingerCrest]
+ * [Weathered Undermine Crest][WeatheredCrest]
+ * [Carved Undermine Crest][CarvedCrest]
+ * [Runed Undermine Crest][RunedCrest ]
+ * [Gilded Undermine Crest][GildedCrest]
 
-[WeatheredHarbingerCrest]: https://www.wowhead.com/currency=2914
-[CarvedHarbingerCrest]: https://www.wowhead.com/currency=2915
-[RunedHarbingerCrest]: https://www.wowhead.com/currency=2916
-[GildedHarbingerCrest]: https://www.wowhead.com/currency=2917
+[WeatheredCrest]: https://www.wowhead.com/currency=3107
+[CarvedCrest]:    https://www.wowhead.com/currency=3108
+[RunedCrest ]:     https://www.wowhead.com/currency=3109
+[GildedCrest]:    https://www.wowhead.com/currency=3110
