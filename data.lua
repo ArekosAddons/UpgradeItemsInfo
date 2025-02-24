@@ -6,7 +6,7 @@ local ITEM_TOKENS = {
 
 -- [currencyID] = maxItemLevel
 ns.CURRENCIES_TOKEN = {
-    -- War Within: Season 1
+    -- The War Within: Season 1
     [2914] = 593, -- Weathered Harbinger Crest
     [2915] = 606, -- Carved Harbinger Crest
     [2916] = 619, -- Runed Harbinger Crest
@@ -15,6 +15,15 @@ ns.CURRENCIES_TOKEN = {
     [2919] = 606, -- Carved Harbinger Crest (hidden)
     [2920] = 619, -- Runed Harbinger Crest (hidden)
     [2921] = 639, -- Gilded Harbinger Crest (hidden)
+    -- The War Within: Season 2
+    [3107] = 632, -- Weathered Undermine Crest
+    [3108] = 645, -- Carved Undermine Crest
+    [3109] = 658, -- Runed Undermine Crest
+    [3110] = 662, -- Gilded Undermine Crest
+    [3111] = 632, -- Weathered Undermine Crest (hidden)
+    [3112] = 645, -- Carved Undermine Crest (hidden)
+    [3113] = 658, -- Runed Undermine Crest (hidden)
+    [3114] = 662, -- Gilded Undermine Crest (hidden)
 }
 
 ns.ITEM_TOKENS = ITEM_TOKENS
