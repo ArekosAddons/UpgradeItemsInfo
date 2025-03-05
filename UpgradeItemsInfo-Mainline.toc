@@ -1,9 +1,9 @@
-## Interface: 110007, 110100
+## Interface: 110100
 ## Title: UpgradeItemsInfo
 ## Notes: Indicates the number of 'Equipment Slots' still requiring an Upgrade Token.
 ## Notes-deDE: Zeigt die Anzahl der „Ausrüstungs-Slots" an, für die noch ein Aufwertungs-Token benötigt wird.
 
-## Version: 1.1.3
+## Version: 1.1.4
 ## Author: Areko
 
 ## Category-enUS: Equipment
