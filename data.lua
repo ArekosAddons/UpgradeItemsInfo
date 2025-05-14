@@ -21,11 +21,11 @@ ns.CURRENCIES_TOKEN = {
     [3107] = 632, -- Weathered Undermine Crest
     [3108] = 645, -- Carved Undermine Crest
     [3109] = 658, -- Runed Undermine Crest
-    [3110] = 678, -- Gilded Undermine Crest
+    [3110] = 678+6, -- Gilded Undermine Crest
     [3111] = 632, -- Weathered Undermine Crest (hidden)
     [3112] = 645, -- Carved Undermine Crest (hidden)
     [3113] = 658, -- Runed Undermine Crest (hidden)
-    [3114] = 678, -- Gilded Undermine Crest (hidden)
+    [3114] = 678+6, -- Gilded Undermine Crest (hidden)
 }
 
 ns.ITEM_TOKENS = ITEM_TOKENS
