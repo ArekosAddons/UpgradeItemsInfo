@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.1.6] - 2025-05-14
 ### Added
  - Updated maximum item level for Gilded Crest
-   * Turbo boost added to more upgrade levels
+   * Turbo boost added two more upgrade levels
 ## [1.1.5] - 2025-03-26
 ### Fixed
  - Correct maximum item level for Gilded Crest (again)
