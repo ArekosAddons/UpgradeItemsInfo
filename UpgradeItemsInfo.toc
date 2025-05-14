@@ -1,2 +1,0 @@
-## Interface: 110007, 110100
-## Title: UpgradeItemsInfo
