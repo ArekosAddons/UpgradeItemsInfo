@@ -1,0 +1,34 @@
+{
+    "workspace": {
+        "library": ["\/Users\/sven\/.local\/share\/wow-api-data\/Annotations\/"]
+    },
+    "runtime": {
+        "version": "Lua 5.2"
+    },
+    "format": {
+        "defaultConfig": {
+            "align_continuous_rect_table_field": true,
+            "space_before_function_call_single_arg": false,
+            "never_indent_before_if_condition": true,
+            "space_before_closure_open_parenthesis": false,
+            "align_call_args": true,
+            "end_statement_with_semicolon": "same_line"
+        }
+    },
+    "diagnostics": {
+        "neededFileStatus": {
+            "unused-function": "None",
+            "await-in-sync": "Any",
+            "empty-block": "None",
+            "not-yieldable": "Any"
+        },
+        "unusedLocalExclude": [],
+        "severity": {
+            "global-element": "Warning"
+        }
+    },
+    "hint": {
+        "setType": true,
+        "enable": true
+    }
+}

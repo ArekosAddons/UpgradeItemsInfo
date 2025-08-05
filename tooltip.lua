@@ -1,6 +1,15 @@
-local ADDONNAME = ...
+---@type string
+local ADDONNAME,
 ---@class ns
-local ns = select(2, ...)
+ns = ...
+
+local math = math
+local string = string
+
+local C_AddOns = C_AddOns
+local C_ItemUpgrade = C_ItemUpgrade
+local C_Timer = C_Timer
+
 
 local L = LibStub("AceLocale-3.0"):GetLocale(ADDONNAME)
 

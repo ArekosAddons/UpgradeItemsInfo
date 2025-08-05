@@ -1,6 +1,9 @@
-local ADDONNAME = ...
+---@type string
+local ADDONNAME,
 ---@class ns
-local ns = select(2, ...)
+ns = ...
+
+local string = string
 
 do -- Event handling
     local frame = CreateFrame("frame")
