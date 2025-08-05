@@ -15,22 +15,16 @@ do -- Event handling
         end
     })
 
-    if C_EventUtils then
-        local C_EventUtils = C_EventUtils
+    local C_EventUtils = C_EventUtils
 
-        function ns.RegisterEvent(event, callback)
-            local callbacks = events[event]
+    function ns.RegisterEvent(event, callback)
+        local callbacks = events[event]
 
-            if next(callbacks) == nil and C_EventUtils.IsEventValid(event) then
-                callbacks[callback] = true
-                frame:RegisterEvent(event)
-            else
-                callbacks[callback] = true
-            end
-        end
-    else
-        function ns.RegisterEvent(_event, _callback)
-            error("Not Implemented")
+        if next(callbacks) == nil and C_EventUtils.IsEventValid(event) then
+            callbacks[callback] = true
+            frame:RegisterEvent(event)
+        else
+            callbacks[callback] = true
         end
     end
 
