@@ -172,15 +172,22 @@ local function onLogin()
     end
 
 
-    local function onHide()
-        resetCaches()
+    local isUpgradeHooked = false
+    local function hook_upgrade()
+        if isUpgradeHooked then return end
+        isUpgradeHooked = true
+
+        hooksecurefunc(ItemUpgradeFrame, "OnConfirm", function()
+            local delay = ItemUpgradeFrame.numUpgradeLevels or 1
+            C_Timer.After(delay, resetCaches)
+        end)
     end
     if C_AddOns.IsAddOnLoaded("Blizzard_ItemUpgradeUI") then
-        ItemUpgradeFrame:HookScript("OnHide", onHide)
+        hook_upgrade()
     else
         ns.RegisterEvent("ADDON_LOADED", function(_, addonName)
             if addonName == "Blizzard_ItemUpgradeUI" then
-                ItemUpgradeFrame:HookScript("OnHide", onHide)
+                hook_upgrade()
                 return true
             end
         end)
