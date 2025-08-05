@@ -1,0 +1,56 @@
+{
+    "workspace": {
+        "library": [
+            "~/.local/share/wow-api-data/Annotations/Core/",
+            "~/.local/share/wow-api-data/Annotations/FrameXML/Annotations/AddOns/Blizzard_ItemUpgradeUI/",
+            "~/.local/share/wow-api-data/Annotations/FrameXML/Annotations/AddOns/Blizzard_SharedXMLGame/Tooltip/",
+            "~/.local/share/wow-api-data/Annotations/FrameXML/Annotations/AddOns/Blizzard_FrameXML/Mainline/AlertFrameSystems.lua.annotated.lua",
+            "~/.local/share/wow-api-data/Annotations/FrameXML/Annotations/AddOns/Blizzard_FrameXML/Mainline/AlertFrameSystems.xml.annotated.lua",
+            "~/.local/share/wow-api-data/Annotations/FrameXML/Annotations/AddOns/Blizzard_UIPanels_Game/Mainline/ItemRef.xml.annotated.lua",
+        ]
+    },
+    "runtime": {
+        "version": "Lua 5.2"
+    },
+    "format": {
+        "defaultConfig": {
+            "align_continuous_rect_table_field": true,
+            "space_before_function_call_single_arg": false,
+            "never_indent_before_if_condition": true,
+            "space_before_closure_open_parenthesis": false,
+            "align_call_args": true,
+            "end_statement_with_semicolon": "same_line"
+        }
+    },
+    "diagnostics": {
+        "neededFileStatus": {
+            "unused-function": "None",
+            "await-in-sync": "Any",
+            "empty-block": "None",
+            "not-yieldable": "Any"
+        },
+        "unusedLocalExclude": [],
+        "severity": {
+            "global-element": "Warning"
+        }
+    },
+    "hint": {
+        "setType": true,
+        "enable": true
+    },
+    "diagnostics.globals": [
+        "INVTYPE_HEAD",
+        "INVTYPE_WEAPONOFFHAND",
+        "INVTYPE_CLOAK",
+        "INVTYPE_NECK",
+        "INVTYPE_SHOULDER",
+        "INVTYPE_CHEST",
+        "INVTYPE_WAIST",
+        "INVTYPE_LEGS",
+        "INVTYPE_FEET",
+        "INVTYPE_WRIST",
+        "INVTYPE_HAND",
+        "INVTYPE_FINGER",
+        "INVTYPE_TRINKET"
+    ]
+}

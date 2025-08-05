@@ -1,6 +1,7 @@
-local ADDONNAME = ...
+---@type string
+local ADDONNAME,
 ---@class ns
-local ns = select(2, ...)
+ns = ...
 
 -- [itemID] = maxItemLevel
 local ITEM_TOKENS = {
