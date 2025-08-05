@@ -27,6 +27,15 @@ ns.CURRENCIES_TOKEN = {
     [3112] = 645, -- Carved Undermine Crest (hidden)
     [3113] = 658, -- Runed Undermine Crest (hidden)
     [3114] = 678+6, -- Gilded Undermine Crest (hidden)
+    -- The War Within: Season 3
+    [3284] = 678, -- Weathered Ethereal Crest
+    [3285] = 678, -- Weathered Ethereal Crest (hidden)
+    [3286] = 691, -- Carved Ethereal Crest
+    [3287] = 691, -- Carved Ethereal Crest (hidden)
+    [3288] = 704, -- Runed Ethereal Crest
+    [3289] = 704, -- Runed Ethereal Crest (hidden)
+    [3290] = 723, -- Gilded Ethereal Crest
+    [3291] = 723, -- Gilded Ethereal Crest (hidden)
 }
 
 ns.ITEM_TOKENS = ITEM_TOKENS
