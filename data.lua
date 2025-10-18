@@ -34,8 +34,8 @@ ns.CURRENCIES_TOKEN = {
     [3287] = 691, -- Carved Ethereal Crest (hidden)
     [3288] = 704, -- Runed Ethereal Crest
     [3289] = 704, -- Runed Ethereal Crest (hidden)
-    [3290] = 723, -- Gilded Ethereal Crest
-    [3291] = 723, -- Gilded Ethereal Crest (hidden)
+    [3290] = 723+7, -- Gilded Ethereal Crest
+    [3291] = 723+7, -- Gilded Ethereal Crest (hidden)
 }
 
 ns.ITEM_TOKENS = ITEM_TOKENS
