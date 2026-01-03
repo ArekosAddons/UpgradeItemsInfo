@@ -3,39 +3,34 @@ local ADDONNAME,
 ---@class ns
 ns = ...
 
+local old_ilvls = select(4, GetBuildInfo()) < 120000
+
 -- [itemID] = maxItemLevel
 local ITEM_TOKENS = {
 }
 
 -- [currencyID] = maxItemLevel
 ns.CURRENCIES_TOKEN = {
-    -- The War Within: Season 1
-    [2914] = 593, -- Weathered Harbinger Crest
-    [2915] = 606, -- Carved Harbinger Crest
-    [2916] = 619, -- Runed Harbinger Crest
-    [2917] = 639, -- Gilded Harbinger Crest
-    [2918] = 593, -- Weathered Harbinger Crest (hidden)
-    [2919] = 606, -- Carved Harbinger Crest (hidden)
-    [2920] = 619, -- Runed Harbinger Crest (hidden)
-    [2921] = 639, -- Gilded Harbinger Crest (hidden)
-    -- The War Within: Season 2
-    [3107] = 632, -- Weathered Undermine Crest
-    [3108] = 645, -- Carved Undermine Crest
-    [3109] = 658, -- Runed Undermine Crest
-    [3110] = 678+6, -- Gilded Undermine Crest
-    [3111] = 632, -- Weathered Undermine Crest (hidden)
-    [3112] = 645, -- Carved Undermine Crest (hidden)
-    [3113] = 658, -- Runed Undermine Crest (hidden)
-    [3114] = 678+6, -- Gilded Undermine Crest (hidden)
     -- The War Within: Season 3
-    [3284] = 678, -- Weathered Ethereal Crest
-    [3285] = 678, -- Weathered Ethereal Crest (hidden)
-    [3286] = 691, -- Carved Ethereal Crest
-    [3287] = 691, -- Carved Ethereal Crest (hidden)
-    [3288] = 704, -- Runed Ethereal Crest
-    [3289] = 704, -- Runed Ethereal Crest (hidden)
-    [3290] = 723+7, -- Gilded Ethereal Crest
-    [3291] = 723+7, -- Gilded Ethereal Crest (hidden)
+    [3284] = old_ilvls and 678 or 131, -- Weathered Ethereal Crest
+    [3285] = old_ilvls and 678 or 131, -- Weathered Ethereal Crest (hidden)
+    [3286] = old_ilvls and 691 or 144, -- Carved Ethereal Crest
+    [3287] = old_ilvls and 691 or 144, -- Carved Ethereal Crest (hidden)
+    [3288] = old_ilvls and 704 or 157, -- Runed Ethereal Crest
+    [3289] = old_ilvls and 704 or 157, -- Runed Ethereal Crest (hidden)
+    [3290] = old_ilvls and 723+7 or 170, -- Gilded Ethereal Crest
+    [3291] = old_ilvls and 723+7 or 170, -- Gilded Ethereal Crest (hidden)
+    -- Midnight: Season 1
+    [3383] = 237, -- Adventurer Dawncrest
+    [3391] = 237, -- Adventurer Dawncrest (hidden)
+    [3341] = 250, -- Veteran Dawncrest
+    [3342] = 250, -- Veteran Dawncrest (hidden)
+    [3343] = 263, -- Champion Dawncrest
+    [3344] = 263, -- Champion Dawncrest (hidden)
+    [3345] = 276, -- Hero Dawncrest
+    [3346] = 276, -- Hero Dawncrest (hidden)
+    [3347] = 289, -- Myth Dawncrest
+    [3348] = 289, -- Myth Dawncrest (hidden)
 }
 
 ns.ITEM_TOKENS = ITEM_TOKENS

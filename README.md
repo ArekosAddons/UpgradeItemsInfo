@@ -2,12 +2,16 @@
 Indicates the number of 'Equipment Slots' still requiring an Upgrade Token.
 
 Current support for:
- * [Weathered Ethereal Crest][WeatheredCrest]
- * [Carved Ethereal Crest][CarvedCrest]
- * [Runed Ethereal Crest][RunedCrest ]
- * [Gilded Ethereal Crest][GildedCrest]
+ * [Adventurer Dawncrest][AdventurerCrest]
+ * [Veteran Dawncrest][VeteranCrest]
+ * [Champion Dawncrest][ChampionCrest]
+ * [Hero Dawncrest][HeroCrest]
+ * [Myth Dawncrest][MythCrest]
+ * And The War Within Season 3 crests with pre-patch support
 
-[WeatheredCrest]: https://www.wowhead.com/currency=3284
-[CarvedCrest]:    https://www.wowhead.com/currency=3286
-[RunedCrest ]:    https://www.wowhead.com/currency=3288
-[GildedCrest]:    https://www.wowhead.com/currency=3290
+
+[AdventurerCrest]: https://www.wowhead.com/currency=3383
+[VeteranCrest]:    https://www.wowhead.com/currency=3341
+[ChampionCrest]:   https://www.wowhead.com/currency=3343
+[HeroCrest]:       https://www.wowhead.com/currency=3345
+[MythCrest]:       https://www.wowhead.com/currency=3347
