@@ -149,16 +149,6 @@ local function onLogin()
         end
     end
 
-    local item_tokens = ns.ITEM_TOKENS
-    if next(item_tokens) ~= nil then
-        TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, function(tooltip, data)
-            if not supportedTooltips[tooltip] then return end
-            local maxLevel = item_tokens[data.id]
-            if not maxLevel then return end
-
-            add_info(tooltip, maxLevel)
-        end)
-    end
 
     local currencies_token = ns.CURRENCIES_TOKEN
     if next(currencies_token) ~= nil then
