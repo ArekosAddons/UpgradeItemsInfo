@@ -1,5 +1,5 @@
 # UpgradeItemsInfo
-Indicates the number of 'Equipment Slots' still requiring an Upgrade Token.
+Indicates the number of 'Equipment Slots' still requiring an Upgrade Token with cost.
 
 Current support for:
  * [Adventurer Dawncrest][AdventurerCrest]
@@ -7,7 +7,6 @@ Current support for:
  * [Champion Dawncrest][ChampionCrest]
  * [Hero Dawncrest][HeroCrest]
  * [Myth Dawncrest][MythCrest]
- * And The War Within Season 3 crests with pre-patch support
 
 
 [AdventurerCrest]: https://www.wowhead.com/currency=3383
