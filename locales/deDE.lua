@@ -7,8 +7,10 @@ local ADDONNAME = ...
 local L = LibStub("AceLocale-3.0"):NewLocale(ADDONNAME, "deDE") -- luacheck: ignore 113/LibStub
 if not L then return end
 
-L.UPGRADE_TO_D = "|cnWHITE_FONT_COLOR:Erlaubt die Aufwertung auf|r %d"
+L.UPGRADE_TO_D = "|cnWHITE_FONT_COLOR:Erlaubt die Aufwertung auf |WGegenstandsstufe|r %d|w"
+L.UPGRADE_TO_WITH_COST_DD = "|cnWHITE_FONT_COLOR:Erlaubt die Aufwertung auf |WGegenstandsstufe|r %d|w |cnWHITE_FONT_COLOR:für|r |W%d |cnWHITE_FONT_COLOR:Wappen|r|w"
 -- L.SLOT_HIGHMARK_SD = "|cnWHITE_FONT_COLOR:%s|r: %d"
+-- L.SLOT_HIGHMARK_WITH_COST_SDD = "|cnWHITE_FONT_COLOR:%s|r: %d |cnWHITE_FONT_COLOR:(|r%d|cnWHITE_FONT_COLOR:)|r"
 
 -- Slots
 -- L.SLOT_Head = INVTYPE_HEAD

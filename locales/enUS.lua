@@ -4,11 +4,14 @@ local debug = false -- luacheck: ignore 311/debug
 debug = true
 --@end-debug@
 
+---@class LOCALE
 local L = LibStub("AceLocale-3.0"):NewLocale(ADDONNAME, "enUS", true, debug) -- luacheck: ignore 113/LibStub
 if not L then return end
 
-L.UPGRADE_TO_D = "|cnWHITE_FONT_COLOR:Can be upgraded up to|r %d"
+L.UPGRADE_TO_D = "|cnWHITE_FONT_COLOR:Can be upgraded up to |Witem level|r %d|w"
+L.UPGRADE_TO_WITH_COST_DD = "|cnWHITE_FONT_COLOR:Can be upgraded up to |Witem level|r %d|w |cnWHITE_FONT_COLOR:for|r |W%d |cnWHITE_FONT_COLOR:crests|r|w"
 L.SLOT_HIGHMARK_SD = "|cnWHITE_FONT_COLOR:%s|r: %d"
+L.SLOT_HIGHMARK_WITH_COST_SDD = "|cnWHITE_FONT_COLOR:%s|r: %d |cnWHITE_FONT_COLOR:(|r%d|cnWHITE_FONT_COLOR:)|r"
 
 -- Slots
 L.SLOT_Head = INVTYPE_HEAD
