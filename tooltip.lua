@@ -27,7 +27,7 @@ local currency_cost_for_slot = {} do
     for _, slot in pairs(RedundancySlots) do
         currency_cost_for_slot[slot] = setmetatable({}, {
             __index = function(t, currrencyID)
-                local value = 0
+                local value
 
                 local data = upgrade_costs[currrencyID]
                 if data then
@@ -41,6 +41,7 @@ local currency_cost_for_slot = {} do
                     end
                 end
 
+                value = value or 0
                 t[currrencyID] = value
                 return value
             end
